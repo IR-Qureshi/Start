@@ -1,8 +1,6 @@
 package com.example.dellpc.start;
 
 
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -126,8 +124,8 @@ private View view;
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Uri downloadUri = taskSnapshot.getDownloadUrl();
-                    User userPhoto = new User(null, mUsername, downloadUri.toString());
-                    mMessageDatabaseRefrence.push().setValue(userPhoto);
+                    //User userPhoto = new User(null, mUsername, downloadUri.toString());
+                    //mMessageDatabaseRefrence.push().setValue(userPhoto);
 
                 }
             });
