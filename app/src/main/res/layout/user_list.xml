@@ -7,8 +7,7 @@
         android:id="@+id/UserPic"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/com_facebook_button_icon_white"
-        />
+        android:background="@drawable/com_facebook_button_icon_white"/>
     <TextView
         android:id="@+id/UserName"
         android:layout_width="wrap_content"

@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if(DEKHAO == RC_DEKHO)
                     {
+                        
                         save(user.getUid(),user.getDisplayName(),user.getEmail());
 
                     }
@@ -119,11 +120,11 @@ public class MainActivity extends AppCompatActivity {
                     startActivityForResult(
                             AuthUI.getInstance()
                                     .createSignInIntentBuilder()
-                                    .setIsSmartLockEnabled(false)
+                                    //.setIsSmartLockEnabled(false)
                                     .setProviders(
                                             AuthUI.EMAIL_PROVIDER,
-                                            AuthUI.GOOGLE_PROVIDER)
-                                    .build(),
+                                            AuthUI.GOOGLE_PROVIDER
+                                    ).build(),
                             RC_SIGN_IN);
 
                 }
@@ -138,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
 
         User userz = new User(uid,displayName,email,null);
         mMessageDatabaseRefrence.push().setValue(userz);
-
 
     }
 
